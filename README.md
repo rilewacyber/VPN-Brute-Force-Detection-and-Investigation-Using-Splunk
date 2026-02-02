@@ -17,7 +17,7 @@ The VPN logs were ingested into Splunk by uploading the JSON file. We confirmed 
 
 ![Log Ingestion](./splunk1.png)
 
-![Source Type Validation](./Splunk2.png)
+![Source Type Validation](./splunk2.png)
 
 ---
 
@@ -25,7 +25,7 @@ The VPN logs were ingested into Splunk by uploading the JSON file. We confirmed 
 
 A quick review of the logs was done to understand the data, the fields available, and the structure.
 
-![Initial Log Review](./Splunk4.png)
+![Initial Log Review](./splunk4.png)
 
 ---
 
@@ -38,7 +38,7 @@ We analyzed the counts of different actions in the logs.
 
 Focus was placed on the **failed authentication events**.
 
-![Action Analysis](./Splunk5.png)
+![Action Analysis](./splunk5.png)
 
 ---
 
@@ -46,7 +46,8 @@ Focus was placed on the **failed authentication events**.
 
 Stats counts by username revealed that the user **Simon** had the highest number of events (278), indicating suspicious activity.
 
-![Username Activity Analysis](./Splunk6.png)
+![Username Activity Analysis](./splunk6.png)
+
 
 ---
 
@@ -54,7 +55,7 @@ Stats counts by username revealed that the user **Simon** had the highest number
 
 Stats counts by source IP showed that **172.201.60.191** was responsible for the same 278 events, matching the username Simon.
 
-![Source IP Analysis](./Splunk7.png)
+![Source IP Analysis](./splunk7.png)
 
 ---
 
@@ -62,7 +63,8 @@ Stats counts by source IP showed that **172.201.60.191** was responsible for the
 
 Time-based charts revealed **rapid spikes of failed authentication**, with a particularly high number of events on **Tuesday, January 11th**.
 
-![Time-Based Activity Analysis](./Splunk8.png)
+![Time-Based Activity Analysis](./splunk8.png)
+
 
 ---
 
@@ -70,7 +72,7 @@ Time-based charts revealed **rapid spikes of failed authentication**, with a par
 
 We combined **username, source IP, and action fields** to identify patterns. Simon’s account had **274 failed attempts** from the same IP, followed by **4 successful authentications**.
 
-![Combined Analysis](./Splunk9.png)
+![Combined Analysis](./splunk9.png)
 
 ---
 
@@ -83,8 +85,9 @@ We checked failed authentication bursts using 5-minute time spans:
 
 This confirmed rapid attempts within short intervals.
 
-![Failed Auth Burst Analysis 1](./Splunk10.png)  
-![Failed Auth Burst Analysis 2](./Splunk11.png)
+![Failed Auth Burst Analysis 1](./splunk10.png)
+![Failed Auth Burst Analysis 2](./splunk11.png)
+
 
 ---
 
@@ -98,7 +101,7 @@ Details of the source IP were checked:
 
 This helped understand the attack origin.
 
-![Source Context Review](./Splunk12.png)
+![Source Context Review](./splunk12.png)
 
 ---
 
@@ -106,7 +109,8 @@ This helped understand the attack origin.
 
 Simon’s successful login events (built) were reviewed to understand the impact and duration of the session.
 
-![Successful Authentication Review](./Splunk14.png)
+![Successful Authentication Review](./splunk14.png)
+
 
 ---
 
@@ -117,7 +121,8 @@ We determined the timeline for Simon’s activity:
 - **Last event:** 15th January, 8:35  
 - **Duration:** 3,496 units (log metric)  
 
-![First and Last Activity Analysis](./Splunk16.png)
+![First and Last Activity Analysis](./splunk16.png)
+
 
 ---
 # VPN Authentication Security Incident Report
