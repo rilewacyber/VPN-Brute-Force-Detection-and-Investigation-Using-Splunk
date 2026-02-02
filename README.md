@@ -15,7 +15,7 @@ Splunk (local installation)
 
 The VPN logs were ingested into Splunk by uploading the JSON file. We confirmed that the logs were visible, fields were parsed correctly, and the source type was correctly detected as JSON.
 
-![Log Ingestion](./Splunk1.png)
+![Log Ingestion](./splunk1.png)
 
 ![Source Type Validation](./Splunk2.png)
 
