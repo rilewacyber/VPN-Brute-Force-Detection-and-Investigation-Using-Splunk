@@ -153,7 +153,7 @@ Rapid spikes of failed authentication attempts were observed within short time i
 - Investigate whether the source IP is legitimate or malicious.  
 - Monitor for repeated login patterns from the same IP or user.  
 - Review account lockout policies and implement stricter thresholds.  
-- Full investigation details, including screenshots and queries, can be found in the attached [PDF documentation](./VPN_Authentication_Investigation.pdf).
+- Full investigation details, including screenshots and queries, can be found in the attached [PDF documentation](./VPN_Brute_Force_Detection_and_Investigation_Using_Splunk.pdf).
 
 ---
 
